@@ -10,7 +10,7 @@ galaxy_info:
   - name: Ubuntu
     versions:
     - all
-  - name: RHEL
+  - name: EL
     versions:
     - all
   galaxy_tags:
