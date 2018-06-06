@@ -13,7 +13,7 @@
 
 
 [cnos-clos-leaf]
-10.241.107.39   username=<username> password=<password> deviceType=g8272_cnos condition=LP21
-10.241.107.40   username=<username> password=<password> deviceType=g8272_cnos condition=LP22
-10.240.175.211   username=<username> password=<password> deviceType=g8272_cnos condition=LP23
-10.240.175.212   username=<username> password=<password> deviceType=g8272_cnos condition=LP23
+10.241.107.39   ansible_network_os=cnos ansible_ssh_user=<username> ansible_ssh_pass=<password> deviceType=g8272_cnos condition=LP21
+10.241.107.40   ansible_network_os=cnos ansible_ssh_user=<username> ansible_ssh_pass=<password> deviceType=g8272_cnos condition=LP22
+10.240.175.211  ansible_network_os=cnos ansible_ssh_user=<username> ansible_ssh_pass=<password> deviceType=g8272_cnos condition=LP23
+10.240.175.212  ansible_network_os=cnos ansible_ssh_user=<username> ansible_ssh_pass=<password> deviceType=g8272_cnos condition=LP23
