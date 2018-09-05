@@ -1,31 +1,31 @@
 interface Ethernet {{item.leaf_to_spine1_interface1}}
  description {{item.leaf_to_spine1_description1}}
- no bridge-port
+ no switchport
  ip address {{item.leaf_to_spine1_ip1}}
  exit
 
 !
 interface Ethernet {{item.leaf_to_spine1_interface2}}
  description {{item.leaf_to_spine1_description2}}
- no bridge-port
+ no switchport
  ip address {{item.leaf_to_spine1_ip2}}
  exit
 !
 interface Ethernet {{item.leaf_to_spine2_interface1}}
  description {{item.leaf_to_spine2_description1}}
- no bridge-port
+ no switchport
  ip address {{item.leaf_to_spine2_ip1}}
  exit
 !
 interface Ethernet {{item.leaf_to_spine2_interface2}}
  description {{item.leaf_to_spine2_description2}}
- no bridge-port
+ no switchport
  ip address {{item.leaf_to_spine2_ip2}}
  exit
 !
 interface loopback 0
- no bridge-port
- service-policy input copp-system-policy
+ no switchport
+ service-poliswitchportcy input copp-system-policy
  exit
 !
 routing-protocol bgp {{item.router_as_number}}
