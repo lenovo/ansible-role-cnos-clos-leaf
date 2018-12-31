@@ -83,8 +83,8 @@
       password: "{{ hostvars[inventory_hostname]['ansible_ssh_pass'] }}"
       deviceType: "{{ hostvars[inventory_hostname]['deviceType'] }}"
       condition: "{{ hostvars[inventory_hostname]['condition'] }}"
-      flag='{{ item.flag }}' 
-      outputfile=./results/cnos_clos_leaf_{{ inventory_hostname }}_LP24_output.txt
+      flag: '{{ item.flag }}' 
+      outputfile: ./results/cnos_clos_leaf_{{ inventory_hostname }}_LP24_output.txt
   with_items: "{{ cnos_clos_leaf_LP24_data }}"
 
 - name: Replace CLOS BGP Leaf Switches CLI show template with values
