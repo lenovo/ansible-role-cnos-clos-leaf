@@ -10,7 +10,7 @@
   cnos_template: 
       host: {{ inventory_hostname }}
       commandfile: ./commands/cnos_clos_leaf_{{ inventory_hostname }}_common_commands.txt
-      username: {{ hostvars[inventory_hostname]['ansible_ssh_user'] }}
+      username: "{{ hostvars[inventory_hostname]['ansible_ssh_user'] }}"
       password: {{ hostvars[inventory_hostname]['ansible_ssh_pass'] }}
       deviceType: {{ hostvars[inventory_hostname]['deviceType'] }}
       outputfile: ./results/cnos_clos_leaf_{{ inventory_hostname }}_common_output.txt
