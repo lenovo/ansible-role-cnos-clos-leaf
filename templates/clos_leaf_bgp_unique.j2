@@ -1,26 +1,26 @@
-interface Ethernet {{item.leaf_to_spine1_interface1}}
- description {{item.leaf_to_spine1_description1}}
+interface Ethernet {{ item.leaf_to_spine1_interface1 }}
+ description {{ item.leaf_to_spine1_description1 }}
  no switchport
- ip address {{item.leaf_to_spine1_ip1}}
+ ip address {{ item.leaf_to_spine1_ip1 }}
  exit
 
 !
-interface Ethernet {{item.leaf_to_spine1_interface2}}
- description {{item.leaf_to_spine1_description2}}
+interface Ethernet {{ item.leaf_to_spine1_interface2 }}
+ description {{ item.leaf_to_spine1_description2 }}
  no switchport
- ip address {{item.leaf_to_spine1_ip2}}
+ ip address {{ item.leaf_to_spine1_ip2 }}
  exit
 !
-interface Ethernet {{item.leaf_to_spine2_interface1}}
- description {{item.leaf_to_spine2_description1}}
+interface Ethernet {{ item.leaf_to_spine2_interface1 }}
+ description {{ item.leaf_to_spine2_description1 }}
  no switchport
- ip address {{item.leaf_to_spine2_ip1}}
+ ip address {{ item.leaf_to_spine2_ip1 }}
  exit
 !
-interface Ethernet {{item.leaf_to_spine2_interface2}}
- description {{item.leaf_to_spine2_description2}}
+interface Ethernet {{ item.leaf_to_spine2_interface2 }}
+ description {{ item.leaf_to_spine2_description2 }}
  no switchport
- ip address {{item.leaf_to_spine2_ip2}}
+ ip address {{ item.leaf_to_spine2_ip2 }}
  exit
 !
 interface loopback 0
@@ -28,29 +28,29 @@ interface loopback 0
  service-poliswitchportcy input copp-system-policy
  exit
 !
-routing-protocol bgp {{item.router_as_number}}
+routing-protocol bgp {{ item.router_as_number }}
  bestpath as-path multipath-relax
  address-family ipv4 unicast
-  maximum-paths ebgp {{item.router_multipath_number}}
+  maximum-paths ebgp {{ item.router_multipath_number }}
   redistribute direct
   exit
- neighbor {{item.neighbor_address1}} remote-as {{item.neighbor_as_number}}
-  advertisement-interval {{item.neighbor_ad_interval}}
+ neighbor {{ item.neighbor_address1 }} remote-as {{ item.neighbor_as_number }}
+  advertisement-interval {{ item.neighbor_ad_interval }}
   bfd
   address-family ipv4 unicast
   exit
- neighbor {{item.neighbor_address2}} remote-as {{item.neighbor_as_number}}
-  advertisement-interval {{item.neighbor_ad_interval}}
+ neighbor {{ item.neighbor_address2 }} remote-as {{ item.neighbor_as_number }}
+  advertisement-interval {{ item.neighbor_ad_interval }}
   bfd
   address-family ipv4 unicast
   exit
- neighbor {{item.neighbor_address3}} remote-as {{item.neighbor_as_number}}
-  advertisement-interval {{item.neighbor_ad_interval}}
+ neighbor {{ item.neighbor_address3 }} remote-as {{ item.neighbor_as_number }}
+  advertisement-interval {{ item.neighbor_ad_interval }}
   bfd
   address-family ipv4 unicast
   exit
- neighbor {{item.neighbor_address4}} remote-as {{item.neighbor_as_number}}
-  advertisement-interval {{item.neighbor_ad_interval}}
+ neighbor {{ item.neighbor_address4 }} remote-as {{ item.neighbor_as_number }}
+  advertisement-interval {{ item.neighbor_ad_interval }}
   bfd
   address-family ipv4 unicast
   exit
