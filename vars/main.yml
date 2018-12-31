@@ -1,6 +1,6 @@
 cnos_clos_leaf_common_data:
-  - {   stpmst: configuration,
-        stpmpode: mst
+  - { stpmst: configuration,
+      stpmpode: mst
     }
 
 cnos_clos_leaf_LP21_data:
